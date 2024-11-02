@@ -1,6 +1,18 @@
 
 # Guide de Configuration du Projet sur Windows
 
+**Auteur** :  
+- **Nom** : KEMKENG NGOUZA 
+- **Prénom** : KEDI JOEL
+- **nom court** : Joel Kemkeng  
+- **Nom de l'entreprise** : HasDigit @HasDigit 
+- **Initiales** : @HasDigit 
+- **Adresse mail** : kedikemkeng@gmail.com 
+- **Adresse mail** : kedikemkenh@hasdigit.com 
+- **Téléphone** : +33 7 51 54 27 74
+
+
+
 ## 1. **Installation de Python**
 
 ### Télécharger Python 3.12.5
