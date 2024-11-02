@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "b58cbde9-ceca-4437-84c8-ab96e920d8aa",
+		"name": "testAPIlocalParkingCar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22109938"
+	},
+	"item": [
+		{
+			"name": "Api Place Manager",
+			"item": [
+				{
+					"name": "Get All Place",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/place",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Place",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/place/12",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"place",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Place",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"PlaceNumero\": 522,\r\n        \"PhotoFileName\": \"fileName.png\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/place",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Place",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"PlaceId\": 11,\r\n        \"PlaceNumero\": 18,\r\n        \"PlaceCodeQr\": \"QRbase 18\",\r\n        \"DateCreatePlace\": \"2021-10-11\",\r\n        \"DateEdit\": \"2024-09-09\",\r\n        \"Reserver\": false,\r\n        \"MatriculeCar\": \"no car\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/place",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Place",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/place/{id_place}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"place",
+								"{id_place}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD Place Data"
+		},
+		{
+			"name": "Parking Management",
+			"item": [
+				{
+					"name": "Reserver Place",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"PlaceNumero\": 18,\r\n        \"MatriculeCar\": \"LT test 18\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/place/reserver",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"place",
+								"reserver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Liberer Place",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"PlaceNumero\": 18\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/place/liberer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"place",
+								"liberer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reserve Place By QR Code",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"PlaceCodeQr\": \"gAAAAABm36pjSOZ10_lWXbvS-_wc2Bz-jN2aFtlArq00OD54xPF8Fx1oLmGnTZAmIghqsAd64RtoRxpLBUybyjHgREXrLMRnAyyqyeH4C4ByzpMUsX1tyzU=\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/place/liberer_by_QrCode",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"place",
+								"liberer_by_QrCode"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

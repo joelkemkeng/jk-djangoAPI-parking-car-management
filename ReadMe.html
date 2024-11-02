@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide de Configuration du Projet - Parking Car Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        pre {
+            background-color: #333;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        code {
+            background-color: #f4f4f400;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 1.1em;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guide de Configuration du Projet <strong>Parking Car Management</strong></h1>
+    <p><strong>Auteur du projet :</strong> MAEL | Téléphone : <a href="tel:+33745258212">+33 7 45 25 82 12</a></p>
+
+    <h2>1. Installation de Python pour Parking Car Management</h2>
+    
+    <h3>Télécharger Python 3.12.5</h3>
+    <ul>
+        <li><a href="https://www.python.org/downloads/release/python-3125/" target="_blank">Téléchargez Python 3.12.5</a></li>
+        <li>Lors de l'installation, assurez-vous de cocher l'option <strong>"Ajouter Python au PATH"</strong>.</li>
+    </ul>
+    
+    <h3>Créer et Activer un Environnement Virtuel pour Parking Car Management</h3>
+    <ul>
+        <li><strong>Créer l'environnement virtuel</strong> dans le répertoire du projet <em>Parking Car Management</em> :</li>
+        <pre><code>python -m venv .venv</code></pre>
+        <li><strong>Activer l'environnement virtuel</strong> :</li>
+        <pre><code>.venv\Scripts\Activate.ps1</code></pre>
+        <li><strong>Installer les dépendances</strong> à partir du fichier <code>requirements.txt</code> :</li>
+        <pre><code>pip install -r requirements.txt</code></pre>
+    </ul>
+
+    <h2>2. Installation de PostgreSQL et pgAdmin pour Parking Car Management</h2>
+
+    <ul>
+        <li><strong>Installer PostgreSQL version 16</strong> : <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank">Téléchargez PostgreSQL</a></li>
+        <li><strong>Installer pgAdmin version 4 (8.11)</strong> : <a href="https://www.pgadmin.org/download/pgadmin-4-windows/" target="_blank">Téléchargez pgAdmin 4</a></li>
+    </ul>
+
+    <h2>3. Configuration de PostgreSQL pour Parking Car Management</h2>
+    
+    <h3>Ouvrir pgAdmin et Créer une Base de Données pour Parking Car Management</h3>
+    <ul>
+        <li>Ouvrez pgAdmin et connectez-vous à votre serveur PostgreSQL.</li>
+        <li>Créez une nouvelle base de données avec les paramètres suivants pour <strong>Parking Car Management</strong> :</li>
+        <pre><code>DATABASES = {
+    'default': {
+        'NAME': 'parkingdb',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '5433',
+    }
+}</code></pre>
+    </ul>
+
+    <h2>4. Gestion du Projet Parking Car Management avec Django</h2>
+    
+    <h3>Activer l'environnement et Démarrer le Serveur pour Parking Car Management</h3>
+    <ul>
+        <li>Ouvrir un terminal dans le répertoire du projet <strong>Parking Car Management</strong> et activer l'environnement :</li>
+        <pre><code>.venv\Scripts\Activate.ps1</code></pre>
+        <li>Démarrer le serveur Django :</li>
+        <pre><code>python manage.py runserver</code></pre>
+        <li>Si tout fonctionne bien, fermez le serveur avec <strong>(CTRL + C)</strong>.</li>
+    </ul>
+
+    <h3>Migrations de la Base de Données pour Parking Car Management</h3>
+    <ul>
+        <li>Créer les migrations pour le projet <strong>Parking Car Management</strong> :</li>
+        <pre><code>python manage.py makemigrations</code></pre>
+        <li>Appliquer les migrations à la base de données :</li>
+        <pre><code>python manage.py migrate</code></pre>
+    </ul>
+
+    <h3>Redémarrer le Serveur pour Parking Car Management</h3>
+    <ul>
+        <li>Enfin, redémarrez le serveur pour <strong>Parking Car Management</strong> avec :</li>
+        <pre><code>python manage.py runserver</code></pre>
+    </ul>
+
+    <footer>
+        <p><strong>Auteur :</strong> MAEL | Téléphone : <a href="tel:+33745258212">+33 7 45 25 82 12</a></p>
+        <p><strong>Projet :</strong> Parking Car Management</p>
+    </footer>
+
+</body>
+</html>
